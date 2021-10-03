@@ -11,25 +11,52 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
 
-    public float speed = 12f;
+    private float speed;
+    public float speedMin;
+    public float speedMax;
     public float gravity = -10f;
     public float jumpHeight = 2f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    
+
+    public float swayTimerMin;
+    public float swayTimerMax;
+    private float swayTimer;
+    public float swayLengthMax;
+    private float swayLength;
+
+    private Cinemachine.CinemachineVirtualCamera cam;
 
     Vector3 velocity;
     bool isGrounded;
+
+    private Animator cameraAnim;
 
     private bool doOnce;
     [System.NonSerialized]
     public bool roundActive;
 
+    private bool doOnceTwo;
+    private bool doOnceThree;
+
     private Animator anim;
 
     private Timer timer;
+
+    private bool canMove;
+
+    public float timeToStagger;
+
+    public float maxRandomStumble;
+    public float minRandomStumbe;
+    private float randomStumbleTime;
+
+    private int directionInt;
+
+    public bool canSway;
+
 
 #if ENABLE_INPUT_SYSTEM
     InputAction movement;
@@ -37,6 +64,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+
+        canMove = true;
+        randomStumbleTime = Random.Range(minRandomStumbe, maxRandomStumble);
+        cam = GameObject.FindGameObjectWithTag("TheCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
+        cameraAnim = cam.GetComponent<Animator>();
+        doOnceTwo = false;
+        speed = 1;
+        swayTimer = Random.Range(swayTimerMin, swayTimerMax);
         anim = GetComponent<Animator>();
         roundActive = false;
         timer = GameObject.FindGameObjectWithTag("TheTimer").GetComponent<Timer>();
@@ -62,10 +97,42 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (roundActive)
+        {
+            swayTimer -= Time.deltaTime;
+            if (swayTimer <= 0)
+            {
+                speed = Mathf.Lerp(speed, ((int)Random.Range(speedMin + 0.4f, speedMax)), 0.5f);
+                swayTimer = Random.Range(swayTimerMin, swayTimerMax);
+                anim.speed = speed - 0.5f;
+                doOnceTwo = true;
+                swayLength = swayLengthMax;
+            }
 
-        anim.SetFloat("PlayerSpeed", new Vector3(Input.GetAxis("Horizontal"), 0 , Input.GetAxis("Vertical")).magnitude, 1f, Time.deltaTime * 10f);
-        anim.SetFloat("HorizontalDirection", Input.GetAxis("Horizontal"), 1f, Time.deltaTime * 10f);
-        anim.SetFloat("VerticalDirection", Input.GetAxis("Vertical"), 0.5f, Time.deltaTime * 10f);
+            if (swayLength > 0)
+            {
+                swayLength -= Time.deltaTime;
+            }
+
+            if (swayLength <= 0 && doOnceTwo)
+            {
+                doOnceTwo = false;
+                speed = 1;
+                anim.speed = speed + 0.2f;
+                swayLength = 0;
+            }
+        }
+        
+       
+       
+
+        if (canMove)
+        {
+            anim.SetFloat("PlayerSpeed", new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).magnitude, 1f, Time.deltaTime * 10f);
+            anim.SetFloat("HorizontalDirection", Input.GetAxis("Horizontal"), 1f, Time.deltaTime * 10f);
+            anim.SetFloat("VerticalDirection", Input.GetAxis("Vertical"), 0.5f, Time.deltaTime * 10f);
+        }
+        
 
         if (!doOnce)
         {
@@ -102,19 +169,32 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-
         Vector3 move = transform.right * x + transform.forward * z;
-        if (Mathf.Abs(move.x) > Mathf.Abs(move.z))
+        if (canMove)
         {
-            controller.Move(new Vector3(move.x, move.y, 0).normalized * speed * Time.deltaTime);
+            randomStumbleTime -= Time.deltaTime;
+            if (Mathf.Abs(move.x) > Mathf.Abs(move.z))
+            {
+                controller.Move(new Vector3(move.x, move.y, 0).normalized * speed * Time.deltaTime);
+            }
+            else
+            {
+                controller.Move(new Vector3(0, move.y, move.z).normalized * speed * Time.deltaTime);
+            }
+        }
+        
+        //controller.Move(move * speed * Time.deltaTime);
+
+        if (move.magnitude > 0.1f)
+        {
+            cameraAnim.SetTrigger("SwayCamera");
         }
         else
         {
-            controller.Move(new Vector3(0, move.y, move.z).normalized * speed * Time.deltaTime);
+            cameraAnim.SetTrigger("UnSway");
         }
-        //controller.Move(move * speed * Time.deltaTime);
 
-        if(jumpPressed && isGrounded)
+        if (jumpPressed && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
@@ -133,5 +213,105 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //controller.Move(velocity * Time.deltaTime);
+        if (canSway)
+        {
+            if (randomStumbleTime <= 0 && !doOnceThree)
+            {
+                doOnceThree = true;
+                RandomStumble();
+                canMove = false;
+            }
+        }
+        
+
+        if (canSway)
+        {
+
+            if (directionInt != 0)
+            {
+                if (directionInt == 1)
+                {
+                    anim.SetFloat("PlayerSpeed", 1f);
+                    anim.SetFloat("VerticalDirection", -1f, 0.2f, Time.deltaTime * 10);
+                    controller.Move((Vector3.forward.normalized * 2.5f) * Time.deltaTime);
+                }
+                if (directionInt == 2)
+                {
+                    anim.SetFloat("PlayerSpeed", 1f);
+                    anim.SetFloat("VerticalDirection", 1f, 0.2f, Time.deltaTime * 10);
+                    controller.Move((Vector3.back.normalized * 2.5f) * Time.deltaTime);
+
+                }
+                if (directionInt == 3)
+                {
+                    anim.SetFloat("PlayerSpeed", 1f);
+                    anim.SetFloat("HorizontalDirection", 1f, 0.2f, Time.deltaTime * 10);
+                    controller.Move((Vector3.left.normalized * 2.5f) * Time.deltaTime);
+
+                }
+                if (directionInt == 4)
+                {
+                    anim.SetFloat("PlayerSpeed", 1f);
+                    anim.SetFloat("HorizontalDirection", -1f, 0.2f, Time.deltaTime * 10);
+                    controller.Move((Vector3.right.normalized * 2.5f) * Time.deltaTime);
+
+                }
+            }
+        }
+        
+        
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("AShelf") || hit.gameObject.CompareTag("ATable"))
+        {
+                if (hit.gameObject.GetComponent<KinematicOnTouch>() != null)
+                {
+                    hit.gameObject.GetComponent<KinematicOnTouch>().Touched();
+                }
+            
+        }
+    }
+
+    private void RandomStumble()
+    {
+        int direction = Random.Range(1, 5);
+        if (direction == 1)
+        {
+            StartCoroutine(StaggerTiming());
+            directionInt = direction;
+           
+        }
+
+        else if (direction == 2)
+        {
+            StartCoroutine(StaggerTiming());
+            directionInt = direction;
+
+        }
+
+        else if (direction == 3)
+        {
+            StartCoroutine(StaggerTiming());
+            directionInt = direction;
+
+        }
+        else
+        {
+            StartCoroutine(StaggerTiming());
+            directionInt = direction;
+
+        }
+    }
+
+    IEnumerator StaggerTiming()
+    {
+        Debug.Log("Staggered!!!!");
+        yield return new WaitForSeconds(timeToStagger);
+        randomStumbleTime = Random.Range(minRandomStumbe, maxRandomStumble);
+        doOnceThree = false;
+        directionInt = 0;
+        canMove = true;
     }
 }

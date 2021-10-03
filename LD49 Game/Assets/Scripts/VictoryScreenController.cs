@@ -7,15 +7,21 @@ public class VictoryScreenController : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public ScoreController scoreController;
-    public TextMeshProUGUI victoryScore;
     public Timer timer;
-    public TextMeshProUGUI victoryTime;
     public SmashCounter smashCounter;
-    public TextMeshProUGUI victorySmashes;
+   
+
+    [System.NonSerialized]
+    public int theScore;
+
+    [System.NonSerialized]
+    public int numSmashes;
 
     // Start is called before the first frame update
     void Start()
     {
+        scoreController = GameObject.FindGameObjectWithTag("ScoreController").GetComponent<ScoreController>();
+        timer = GameObject.FindGameObjectWithTag("TheTimer").GetComponent<Timer>();
         playerMovement = GameObject.FindGameObjectWithTag("ThePlayer").GetComponent<PlayerMovement>();    
     }
 
@@ -31,9 +37,8 @@ public class VictoryScreenController : MonoBehaviour
         {
             timer.StopTimer();
             playerMovement.roundActive = false;
-            victoryScore.text = scoreController.GetScore().ToString();
-            victoryTime.text = timer.timerText.text;
-            victorySmashes.text = smashCounter.smashedObjects.ToString();
+            theScore = scoreController.GetScore();
+            numSmashes = smashCounter.smashedObjects;
             Debug.Log("You Won");
         }
     }

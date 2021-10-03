@@ -7,11 +7,12 @@ public class ObjectSmashAlert : MonoBehaviour
 {
 
     public event Action<int> OnObjectSmashed = delegate {};
+    private bool doOnce;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        doOnce = false;
     }
 
     // Update is called once per frame
@@ -22,6 +23,12 @@ public class ObjectSmashAlert : MonoBehaviour
 
     public void ObjectSmashed()
     {
-        OnObjectSmashed(1);
+        if (!doOnce)
+        {
+            Debug.Log("Passthrough");
+            OnObjectSmashed(1);
+            doOnce = true;
+        }
+        
     }
 }

@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class ObjectSmashedController : MonoBehaviour
 {
-    public ObjectSmashAlert smashAlert;
+    private ObjectSmashAlert smashAlert;
+    public GameObject smashedItem;
+    public GameObject regularItem;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        smashAlert = gameObject.GetComponent<ObjectSmashAlert>();
+        smashedItem.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        smashedItem.transform.position = regularItem.transform.position;
+        smashedItem.transform.rotation = regularItem.transform.rotation;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void DoThis()
     {
-        if (collision.relativeVelocity.magnitude > 1.5)
-        {
+            Debug.Log("Smashed!");
             smashAlert.ObjectSmashed();
-            //Swap Object
-            this.gameObject.SetActive(false);
-        }
-    }
+            regularItem.SetActive(false);
+            smashedItem.SetActive(true);
+            //this.gameObject.SetActive(false);
+     }
 }

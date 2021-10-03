@@ -16,6 +16,11 @@ public class SmashCounter : MonoBehaviour
     {
 
 
+       
+    }
+
+    public void RegisterObjects()
+    {
         foreach (GameObject smashAlert in GameObject.FindGameObjectsWithTag("Smashable"))
         {
             smashAlert.GetComponent<ObjectSmashAlert>().OnObjectSmashed += AddSmash;

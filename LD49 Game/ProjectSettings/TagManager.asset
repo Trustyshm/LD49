@@ -7,6 +7,14 @@ TagManager:
   - TheTimer
   - Smashable
   - ThePlayer
+  - TheCam
+  - AShelf
+  - TableSpawn
+  - ATable
+  - TableBreak
+  - WallSpawn
+  - TableSpots
+  - ScoreController
   layers:
   - Default
   - TransparentFX
