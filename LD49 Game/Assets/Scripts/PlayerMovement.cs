@@ -63,6 +63,12 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canSway;
 
+    private float audioLockout;
+    private float maxAudioLockout = 0.8f;
+    private bool canAudio;
+
+    private bool doOnceFour;
+
 
 #if ENABLE_INPUT_SYSTEM
     InputAction movement;
@@ -70,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        canAudio = false;
+        audioLockout = maxAudioLockout;
         audioSource = GameObject.FindGameObjectWithTag("VoiceSFX").GetComponent<AudioSource>();
         canMove = true;
         randomStumbleTime = Random.Range(minRandomStumbe, maxRandomStumble);
@@ -105,6 +113,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (roundActive)
         {
+            audioLockout -= Time.deltaTime;
+            if (audioLockout <= 0)
+            {
+                canAudio = true;
+            }
+
             swayTimer -= Time.deltaTime;
             if (swayTimer <= 0)
             {
@@ -279,17 +293,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("AShelf") || hit.gameObject.CompareTag("ATable"))
         {
-                if (hit.gameObject.GetComponent<KinematicOnTouch>() != null)
+                if (hit.gameObject.GetComponent<KinematicOnTouch>() != null && canAudio)
                 {
                     int randomClip = Random.Range(1, 3);
                    if (randomClip == 1)
                    {
                         audioSource.clip = dam;
+                        ResetEmote();
                         audioSource.Play();
                    }
                     if (randomClip == 2)
                     {
                         audioSource.clip = oof;
+                        ResetEmote();
                         audioSource.Play();
                     }
 
@@ -299,8 +315,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void ResetEmote()
+    {
+        canAudio = false;
+        audioLockout = maxAudioLockout;
+    }
+
     private void RandomStumble()
     {
+        if (!doOnceFour && !doOnce)
+        {
+            timer.StartTimer();
+            doOnce = true;
+            doOnceFour = true;
+            roundActive = true;
+        }
         
         int direction = Random.Range(1, 5);
         if (direction == 1)

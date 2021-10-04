@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4064.668, g: 2912.9668, b: 2956.3594, a: 1}
+  m_IndirectSpecularColor: {r: 4064.711, g: 2912.9902, b: 2956.5312, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2870,6 +2870,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1598106688}
+        m_TargetAssemblyTypeName: DestroyScore, Assembly-CSharp
+        m_MethodName: ScoreDestroyer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &975818571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3962,6 +3974,7 @@ GameObject:
   - component: {fileID: 1598106685}
   - component: {fileID: 1598106686}
   - component: {fileID: 1598106687}
+  - component: {fileID: 1598106688}
   m_Layer: 0
   m_Name: ControlScene
   m_TagString: Untagged
@@ -4149,6 +4162,18 @@ MonoBehaviour:
   masterSlider: {fileID: 628452132}
   musicSlider: {fileID: 628452131}
   sfxSlider: {fileID: 628452130}
+--- !u!114 &1598106688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598106681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fec06f81dc0d8948818a765829550ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1612082238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9173819141798292517, guid: fae5fb411965029499d959fb28401bca, type: 3}
