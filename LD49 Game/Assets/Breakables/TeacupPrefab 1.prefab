@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168986471666172395}
+  - component: {fileID: 3028843489759775589}
   m_Layer: 0
   m_Name: BrokenTeacup
   m_TagString: Untagged
@@ -50,6 +51,22 @@ Transform:
   m_Father: {fileID: 1732299526955171174}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3028843489759775589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168986471666172394}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}
 --- !u!1 &585401192325273211
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +179,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &592919519436546146
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +292,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1387545815291865052
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +304,7 @@ GameObject:
   - component: {fileID: 1732299526955171174}
   - component: {fileID: 1387545815291865050}
   - component: {fileID: 1387545815291865053}
+  - component: {fileID: 8982771949227345894}
   m_Layer: 0
   m_Name: TeacupPrefab 1
   m_TagString: Smashable
@@ -322,7 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167504d89ac1e5b47a6542a7af783770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smashAlert: {fileID: 1387545815291865053}
   smashedItem: {fileID: 168986471666172394}
   regularItem: {fileID: 3203253088373829386}
 --- !u!114 &1387545815291865053
@@ -337,6 +354,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bda7960fb900e458c767d43e4a5c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8982771949227345894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387545815291865052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}
 --- !u!1 &1697613485179906824
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +482,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2061334448326729916
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +595,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2101208485011523738
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +708,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2682498568021758750
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +821,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &3058880712515039816
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +934,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &3075550303741207540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1047,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &3203253088373829386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1161,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4179377004748883371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,7 +1286,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &3597984865663212247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +1399,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &4078649046556855925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1512,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &4156924489747657927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,7 +1625,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5148760323962290742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,7 +1738,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5750506013670554399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,7 +1851,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &6291158436937175811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1964,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7103314708127763648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2158,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7243947572978451074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2271,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7905205625900707189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,7 +2384,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7980653696183140733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2497,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &8970902074704666948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,4 +2610,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1

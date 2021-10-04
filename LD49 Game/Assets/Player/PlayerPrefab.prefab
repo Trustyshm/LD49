@@ -2419,6 +2419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7690272177499992802}
+  dam: {fileID: 8300000, guid: f645c4fb47f956545978538bbb24a833, type: 3}
+  exertion: {fileID: 8300000, guid: ae2c50cd3003697498773899864ae3c5, type: 3}
+  oof: {fileID: 8300000, guid: 0aec842f6b7e2a044b2ffe3dd0e8f381, type: 3}
   speedMin: 3
   speedMax: 5
   gravity: -10
@@ -2431,7 +2434,6 @@ MonoBehaviour:
   swayTimerMin: 3
   swayTimerMax: 6
   swayLengthMax: 0.7
-  cameraAnim: {fileID: 0}
   timeToStagger: 1
   maxRandomStumble: 10
   minRandomStumbe: 5
@@ -2449,6 +2451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushPower: 8
+  oof: {fileID: 8300000, guid: 0aec842f6b7e2a044b2ffe3dd0e8f381, type: 3}
 --- !u!1 &7586327533870315963
 GameObject:
   m_ObjectHideFlags: 0

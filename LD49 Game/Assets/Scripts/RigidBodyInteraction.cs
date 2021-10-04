@@ -5,9 +5,18 @@ using UnityEngine;
 public class RigidBodyInteraction : MonoBehaviour
 {
     public float pushPower = 8.0F;
+    private AudioSource audioSource;
+    public AudioClip oof;
+
+
+     void Start()
+    {
+        audioSource = GameObject.FindGameObjectWithTag("LevelSFX").GetComponent<AudioSource>();
+    }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // no rigidbody
@@ -26,6 +35,7 @@ public class RigidBodyInteraction : MonoBehaviour
         // then you can also multiply the push velocity by that.
 
         // Apply the push
+        //audioSource.PlayOneShot(oof);
         body.velocity = pushDir * pushPower;
     }
 

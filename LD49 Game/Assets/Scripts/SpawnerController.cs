@@ -70,7 +70,6 @@ public class SpawnerController : MonoBehaviour
         {
             int Randomizer = Random.Range(0, tables.Length);
             //Spawn Tiered
-            Debug.Log(Randomizer);
             if (Randomizer == 0)
             {
                 GameObject selectedObject = tables[Randomizer].gameObject;

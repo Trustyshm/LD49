@@ -24,6 +24,6 @@ public class MenuStartController : MonoBehaviour
 
     public void StartRandomScene()
     {
-        SceneManager.LoadScene("RandomLevels");
+        SceneManager.LoadScene("RandomLevel");
     }
 }

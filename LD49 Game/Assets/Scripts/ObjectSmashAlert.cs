@@ -25,7 +25,7 @@ public class ObjectSmashAlert : MonoBehaviour
     {
         if (!doOnce)
         {
-            Debug.Log("Passthrough");
+
             OnObjectSmashed(1);
             doOnce = true;
         }

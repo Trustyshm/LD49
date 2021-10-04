@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
+
 public class SmashCounter : MonoBehaviour
 {
 
@@ -10,6 +12,9 @@ public class SmashCounter : MonoBehaviour
 
     [System.NonSerialized]
     public int smashedObjects;
+
+    [System.NonSerialized]
+    public int currentBill;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +31,7 @@ public class SmashCounter : MonoBehaviour
             smashAlert.GetComponent<ObjectSmashAlert>().OnObjectSmashed += AddSmash;
         }
         smashedCounter.text = "0";
+        currentBill = 0;
     }
 
     // Update is called once per frame
@@ -37,7 +43,9 @@ public class SmashCounter : MonoBehaviour
     public void AddSmash(int number)
     {
         smashedObjects++;
-        smashedCounter.text = smashedObjects.ToString();
+        //smashedCounter.text = smashedObjects.ToString();
+        currentBill += Random.Range(10, 22);
+        smashedCounter.text = currentBill.ToString();
 
     }
 

@@ -939,6 +939,10 @@ MonoBehaviour:
   - {fileID: 1559299460566881718}
   - {fileID: 1388789668364123477}
   isTable: 1
+  glassTable: 0
+  tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2737255963303274098
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class MenuInteract : MonoBehaviour
 
     public GameObject startScreen;
     public GameObject settingsMenu;
+    public GameObject quitConfirm;
+
+    public MenuSFX menuSFX;
 
     public float maxTimer;
     private float timer;
@@ -24,12 +27,17 @@ public class MenuInteract : MonoBehaviour
 
     private bool startTimer;
 
+    private bool doOnce;
+
     // Start is called before the first frame update
     void Start()
     {
+        doOnce = false;
+
         startTimer = false;
         timer = maxTimer;
         startScreen.SetActive(false);
+        quitConfirm.SetActive(false);
         settingsMenu.SetActive(false);
         fillImage.enabled = false;
     }
@@ -46,28 +54,37 @@ public class MenuInteract : MonoBehaviour
 
         if (timer <= 0)
         {
-            if (isStart)
+            doOnce = true;
+            timer = maxTimer;
+            if (doOnce)
             {
-                StartGame();
+                if (isStart)
+                {
+                    doOnce = false;
+                    StartGame();
+                }
+                if (isSettings)
+                {
+                    doOnce = false;
+                    OpenSettings();
+                }
+                if (isQuit)
+                {
+                   doOnce = false;
+                    QuitGame();
+                }
             }
-            if (isSettings)
-            {
-                OpenSettings();
-            }
-            if (isQuit)
-            {
-                QuitGame();
-            }
+            
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collided");
         if (other.CompareTag("ThePlayer"))
         {
             startTimer = true;
             fillImage.enabled = true;
+            menuSFX.PlayTimer();
         }
         
         
@@ -81,6 +98,7 @@ public class MenuInteract : MonoBehaviour
         startTimer = false;
         timer = maxTimer;
         fillImage.fillAmount = 1;
+        menuSFX.StopTimer();
     }
 
 
@@ -90,7 +108,7 @@ public class MenuInteract : MonoBehaviour
         player.SetActive(false);
         startScreen.SetActive(true);
         cameraAnim.enabled = false;
-        Debug.Log("GameStarted");
+        OnTriggerExit(player.GetComponent<CharacterController>());
     }
 
     private void OpenSettings()
@@ -98,10 +116,35 @@ public class MenuInteract : MonoBehaviour
         player.SetActive(false);
         settingsMenu.SetActive(true);
         cameraAnim.enabled = false;
+        OnTriggerExit(player.GetComponent<CharacterController>());
     } 
 
     private void QuitGame()
     {
+        player.SetActive(false);
+        cameraAnim.enabled = false;
+        quitConfirm.SetActive(true);
+        OnTriggerExit(player.GetComponent<CharacterController>());
+        
+    }
+
+
+    public void QuitTheGame()
+    {
         Application.Quit();
+    }
+
+    public void DontQuit()
+    {
+        player.SetActive(true);
+        quitConfirm.SetActive(false);
+        cameraAnim.enabled = true;
+    }
+
+    public void ExitSettings()
+    {
+        player.SetActive(true);
+        settingsMenu.SetActive(false);
+        cameraAnim.enabled = true;
     }
 }

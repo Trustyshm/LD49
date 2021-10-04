@@ -112,7 +112,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1470725708674639193
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2732933950205690893
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &3191803466632755752
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &4346314949888909226
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &4588196589254744667
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +689,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &4981196345846620452
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +802,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5683191977238104554
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &8342197601473708875
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8342197601473708874}
+  - component: {fileID: 6961955162025363646}
   m_Layer: 0
   m_Name: VaseBroken
   m_TagString: Untagged
@@ -955,6 +956,22 @@ Transform:
   m_Father: {fileID: 8381139500555499165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6961955162025363646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342197601473708875}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}
 --- !u!1 &8350616604218986643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1084,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &8468761031642580255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1197,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &9152468195270634535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1209,7 @@ GameObject:
   - component: {fileID: 8381139500555499165}
   - component: {fileID: 9152468195270634533}
   - component: {fileID: 9152468195270634534}
+  - component: {fileID: 399826774341793346}
   m_Layer: 0
   m_Name: BigVasePrefab
   m_TagString: Smashable
@@ -1241,3 +1259,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bda7960fb900e458c767d43e4a5c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &399826774341793346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9152468195270634535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}

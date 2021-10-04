@@ -20,7 +20,7 @@ public class BreakableCollided : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.relativeVelocity.magnitude > 2f && collision.gameObject.tag != "AShelf")
+        if (collision.relativeVelocity.magnitude > 1.2f && collision.gameObject.tag != "AShelf")
         {
 
             objectController.DoThis();

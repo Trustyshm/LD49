@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8291150439199266410}
+  - component: {fileID: 2355814507673439684}
   m_Layer: 0
   m_Name: Plate Fragment empty
   m_TagString: Untagged
@@ -39,6 +40,22 @@ Transform:
   m_Father: {fileID: 8093426307154655142}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2355814507673439684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496411909496800780}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}
 --- !u!1 &1794521025779499235
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +154,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &1794521025779499236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -250,7 +267,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &2658178364708662469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -363,7 +380,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &2980101303095226389
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -476,7 +493,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &3473123263533016926
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -603,7 +620,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &4897797241462766855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -715,7 +732,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &5440370000260647193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -828,7 +845,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &6283973852750136159
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -941,7 +958,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &7149216713292208673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1054,7 +1071,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &8550905945220353572
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1080,6 +1097,7 @@ GameObject:
   - component: {fileID: 8093426307154655142}
   - component: {fileID: 8870526613351132446}
   - component: {fileID: 8870526613351132445}
+  - component: {fileID: 6875257820565192465}
   m_Layer: 0
   m_Name: PlatePrefab
   m_TagString: Smashable
@@ -1129,6 +1147,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bda7960fb900e458c767d43e4a5c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6875257820565192465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870526613351132444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55af0283ff8f7e4fb4d52072e8eaa43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: c89ec967624c59b4fbf97060d7f83efc, type: 3}
+  soundTwo: {fileID: 8300000, guid: 19364e5f091f32c4e9ac5b10b9ddb34f, type: 3}
+  soundThree: {fileID: 8300000, guid: 3b3f3811006c1b14595e19dbd1b4114e, type: 3}
+  soundFour: {fileID: 8300000, guid: bffebe4de16b0254f8b28cdd132126d2, type: 3}
 --- !u!1 &9138786492295077467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,7 +1261,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!64 &9138786492295077468
 MeshCollider:
   m_ObjectHideFlags: 0

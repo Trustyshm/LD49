@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     [System.NonSerialized]
     public float timerSeconds;
     [System.NonSerialized]
-    public int timerMinutes;
+    public int timerMinutes = 0;
     private bool gameRunning;
 
     // Start is called before the first frame update

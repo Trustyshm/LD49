@@ -13,14 +13,18 @@ public class KinematicOnTouch : MonoBehaviour
     public bool glassTable;
     public GameObject tableBreak;
 
+    public bool isWooden;
+
+    private AudioSource audioSource;
+    public AudioClip woodSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GameObject.FindGameObjectWithTag("LevelSFX").GetComponent<AudioSource>();
         colliderBox = GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
-
-
     }
 
     // Update is called once per frame
@@ -36,7 +40,6 @@ public class KinematicOnTouch : MonoBehaviour
         {
             if (glassTable)
             {
-                Debug.Log("Happening");
                 colliderBox.enabled = false;
                 rb.isKinematic = false;
                 rb.AddRelativeForce(Random.onUnitSphere * 5);
@@ -46,6 +49,10 @@ public class KinematicOnTouch : MonoBehaviour
             }
             else
             {
+                if (rb.isKinematic)
+                {
+                    audioSource.PlayOneShot(woodSound);
+                }
                 rb.isKinematic = false;
                 colliderBox.isTrigger = false;
                 rb.AddRelativeForce(Random.onUnitSphere * 5);
@@ -60,6 +67,10 @@ public class KinematicOnTouch : MonoBehaviour
         }
         else
         {
+            if (rb.isKinematic)
+            {
+                audioSource.PlayOneShot(woodSound);
+            }
             rb.isKinematic = false;
             colliderBox.isTrigger = false;
             rb.AddRelativeForce(Random.onUnitSphere * 5);

@@ -8,9 +8,12 @@ public class ObjectSmashedController : MonoBehaviour
     public GameObject smashedItem;
     public GameObject regularItem;
 
+    private ShatterSound shatterSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        shatterSound = GetComponent<ShatterSound>();
         smashAlert = gameObject.GetComponent<ObjectSmashAlert>();
         smashedItem.SetActive(false);
     }
@@ -24,7 +27,7 @@ public class ObjectSmashedController : MonoBehaviour
 
     public void DoThis()
     {
-            Debug.Log("Smashed!");
+            shatterSound.PlayRandomSound();
             smashAlert.ObjectSmashed();
             regularItem.SetActive(false);
             smashedItem.SetActive(true);

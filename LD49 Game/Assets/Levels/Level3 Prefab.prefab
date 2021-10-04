@@ -255,6 +255,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &40328140051089753
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +536,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &83839081236800638
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +916,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &139097680691557516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1047,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &145339140941443826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1220,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &161010458337081621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1537,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &222359127777943553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,6 +2076,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &254963531752680411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,7 +2232,7 @@ Transform:
   m_GameObject: {fileID: 304298999250011098}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: -16.199198}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 11
@@ -2895,6 +2909,103 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
+--- !u!1 &404407862090869928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3064814515164578252}
+  - component: {fileID: 6832561070667164937}
+  - component: {fileID: 784282852871009128}
+  - component: {fileID: 4594557810841499688}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3064814515164578252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404407862090869928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.78, y: 0, z: 46.563}
+  m_LocalScale: {x: 2, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6998830393459239259}
+  m_RootOrder: 199
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6832561070667164937
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404407862090869928}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &784282852871009128
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404407862090869928}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b3f544390dd828542bc88a0afdfa7c4b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4594557810841499688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404407862090869928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &413422204979485828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,6 +3230,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &421818100036951972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3424,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &465649714299975222
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,6 +3555,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &468836544818364971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,6 +3686,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &473556215022068230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,6 +3817,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &478040332607178967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,6 +3978,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &488764153709311619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,7 +4128,7 @@ Transform:
   m_GameObject: {fileID: 535532066589592930}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: -4.8413954}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 22
@@ -4223,7 +4346,7 @@ Transform:
   m_GameObject: {fileID: 578541805428327772}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: 6.512691}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 23
@@ -4420,6 +4543,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &602741930415613983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,6 +4767,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &634301942320797795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5361,6 +5488,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &864209253239799184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,6 +5649,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &864897246750142367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,6 +6299,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &998341055141178924
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,6 +6553,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1046440495260507856
 GameObject:
   m_ObjectHideFlags: 0
@@ -7453,6 +7588,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1242091594172235281
 GameObject:
   m_ObjectHideFlags: 0
@@ -7755,6 +7892,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1293832840115426865
 GameObject:
   m_ObjectHideFlags: 0
@@ -8036,6 +8175,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1328062159887044606
 GameObject:
   m_ObjectHideFlags: 0
@@ -8340,6 +8481,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1375586538263816029
 GameObject:
   m_ObjectHideFlags: 0
@@ -8499,6 +8642,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1383667013168762701
 GameObject:
   m_ObjectHideFlags: 0
@@ -9009,6 +9154,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1481742279899566413
 GameObject:
   m_ObjectHideFlags: 0
@@ -9658,6 +9805,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1648787704773218579
 GameObject:
   m_ObjectHideFlags: 0
@@ -9877,6 +10026,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1729402725011861539
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,6 +10280,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &1827185720987716950
 GameObject:
   m_ObjectHideFlags: 0
@@ -10678,7 +10831,7 @@ Transform:
   m_GameObject: {fileID: 1984278586011431213}
   m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
   m_LocalPosition: {x: 28.3898, y: 0.1496893, z: 25.301456}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 29
@@ -11175,6 +11328,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2045910981820350630
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,6 +11649,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2101793073962245704
 GameObject:
   m_ObjectHideFlags: 0
@@ -11719,6 +11876,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2158576673556806818
 GameObject:
   m_ObjectHideFlags: 0
@@ -11848,6 +12007,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2158723761428603553
 GameObject:
   m_ObjectHideFlags: 0
@@ -11977,6 +12138,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2160979349870503450
 GameObject:
   m_ObjectHideFlags: 0
@@ -12051,6 +12214,7 @@ GameObject:
   - component: {fileID: 2884824598815573364}
   - component: {fileID: 2624948834354772525}
   - component: {fileID: 7567922081487791369}
+  - component: {fileID: 3518278685126158892}
   m_Layer: 0
   m_Name: Cylinder.003
   m_TagString: Untagged
@@ -12122,6 +12286,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3518278685126158892
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2167711101157697958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6239881831769578202, guid: 19c48b2baebf83e409494db7393b6614, type: 3}
 --- !u!1 &2168705795871450069
 GameObject:
   m_ObjectHideFlags: 0
@@ -12251,6 +12429,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2186738414326261936
 GameObject:
   m_ObjectHideFlags: 0
@@ -13007,6 +13187,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2340560403288156906
 GameObject:
   m_ObjectHideFlags: 0
@@ -13503,6 +13685,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2462172710342210144
 GameObject:
   m_ObjectHideFlags: 0
@@ -13725,6 +13909,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2513879620717990208
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,6 +14163,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2538952351484499325
 GameObject:
   m_ObjectHideFlags: 0
@@ -14232,6 +14420,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2569490486034206114
 GameObject:
   m_ObjectHideFlags: 0
@@ -14361,6 +14551,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2574436857162520613
 GameObject:
   m_ObjectHideFlags: 0
@@ -14736,6 +14928,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2629841996234807105
 GameObject:
   m_ObjectHideFlags: 0
@@ -14865,6 +15059,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2633329523644798987
 GameObject:
   m_ObjectHideFlags: 0
@@ -14994,6 +15190,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2653204060391126784
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,6 +15598,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2806210679070637840
 GameObject:
   m_ObjectHideFlags: 0
@@ -15589,6 +15789,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2823379267590815564
 GameObject:
   m_ObjectHideFlags: 0
@@ -15718,6 +15920,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2824681329846455479
 GameObject:
   m_ObjectHideFlags: 0
@@ -15972,6 +16176,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &2882694218100938247
 GameObject:
   m_ObjectHideFlags: 0
@@ -16550,6 +16756,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3000300796925129094
 GameObject:
   m_ObjectHideFlags: 0
@@ -16868,6 +17076,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3064939362785023431
 GameObject:
   m_ObjectHideFlags: 0
@@ -17027,6 +17237,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3086479198395528593
 GameObject:
   m_ObjectHideFlags: 0
@@ -17156,6 +17368,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3090410845058197413
 GameObject:
   m_ObjectHideFlags: 0
@@ -17285,6 +17499,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3090803165827078896
 GameObject:
   m_ObjectHideFlags: 0
@@ -17596,6 +17812,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3142277011210219744
 GameObject:
   m_ObjectHideFlags: 0
@@ -22652,6 +22870,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3184653905949073361
 GameObject:
   m_ObjectHideFlags: 0
@@ -22874,6 +23094,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3203746028464687152
 GameObject:
   m_ObjectHideFlags: 0
@@ -23274,7 +23496,7 @@ Transform:
   m_GameObject: {fileID: 3368575820601695141}
   m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
   m_LocalPosition: {x: 28.389797, y: 0.1496893, z: 36.65926}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 28
@@ -23937,6 +24159,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3466939939430062964
 GameObject:
   m_ObjectHideFlags: 0
@@ -24207,6 +24431,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3527710616132611191
 GameObject:
   m_ObjectHideFlags: 0
@@ -24390,6 +24616,37 @@ Transform:
   m_Father: {fileID: 5202244900039962279}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3596988392307742740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6566431798297209797}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6566431798297209797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596988392307742740}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 28.89, y: 9.38, z: 45.9}
+  m_LocalScale: {x: 99.99998, y: 1, z: 100.00002}
+  m_Children:
+  - {fileID: 5227328603235267735}
+  m_Father: {fileID: 6998830393459239259}
+  m_RootOrder: 200
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
 --- !u!1 &3605113764624787100
 GameObject:
   m_ObjectHideFlags: 0
@@ -24672,6 +24929,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3726084260239222127
 GameObject:
   m_ObjectHideFlags: 0
@@ -24861,6 +25120,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3740319845844950996
 GameObject:
   m_ObjectHideFlags: 0
@@ -24990,6 +25251,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3753641623893848340
 GameObject:
   m_ObjectHideFlags: 0
@@ -25549,6 +25812,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3870148244007376222
 GameObject:
   m_ObjectHideFlags: 0
@@ -25741,6 +26006,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &3886168614604043449
 GameObject:
   m_ObjectHideFlags: 0
@@ -26837,6 +27104,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4111115773313768555
 GameObject:
   m_ObjectHideFlags: 0
@@ -27029,6 +27298,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4119424696956235158
 GameObject:
   m_ObjectHideFlags: 0
@@ -27283,6 +27554,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4188943481654142496
 GameObject:
   m_ObjectHideFlags: 0
@@ -28255,6 +28528,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4481930471353683923
 GameObject:
   m_ObjectHideFlags: 0
@@ -28384,6 +28659,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4503595295629066321
 GameObject:
   m_ObjectHideFlags: 0
@@ -29433,6 +29710,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4729352150318592335
 GameObject:
   m_ObjectHideFlags: 0
@@ -29562,6 +29841,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4735464991536769507
 GameObject:
   m_ObjectHideFlags: 0
@@ -29781,6 +30062,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4743164062403769436
 GameObject:
   m_ObjectHideFlags: 0
@@ -29943,6 +30226,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4748498883471544475
 GameObject:
   m_ObjectHideFlags: 0
@@ -30102,6 +30387,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4757171301185345327
 GameObject:
   m_ObjectHideFlags: 0
@@ -30705,6 +30992,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4887751701896382077
 GameObject:
   m_ObjectHideFlags: 0
@@ -30834,6 +31123,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4893973367783081900
 GameObject:
   m_ObjectHideFlags: 0
@@ -31055,6 +31346,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4931091301567158782
 GameObject:
   m_ObjectHideFlags: 0
@@ -31336,6 +31629,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &4998824859952727287
 GameObject:
   m_ObjectHideFlags: 0
@@ -31648,6 +31943,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5039138924942906557
 GameObject:
   m_ObjectHideFlags: 0
@@ -31928,7 +32225,7 @@ Transform:
   m_GameObject: {fileID: 5120769630579096460}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: 43.031967}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 250}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 26
@@ -32112,6 +32409,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5163841009639877555
 GameObject:
   m_ObjectHideFlags: 0
@@ -32477,6 +32776,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5295978742695884199
 GameObject:
   m_ObjectHideFlags: 0
@@ -32670,6 +32971,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5307896400884439902
 GameObject:
   m_ObjectHideFlags: 0
@@ -33234,6 +33537,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5405880889440463703
 GameObject:
   m_ObjectHideFlags: 0
@@ -33363,6 +33668,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5413269058173709555
 GameObject:
   m_ObjectHideFlags: 0
@@ -33492,6 +33799,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5413671331008436873
 GameObject:
   m_ObjectHideFlags: 0
@@ -33741,6 +34050,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5448797156338049602
 GameObject:
   m_ObjectHideFlags: 0
@@ -33870,6 +34181,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5474583663295620480
 GameObject:
   m_ObjectHideFlags: 0
@@ -34029,6 +34342,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5492878850981245951
 GameObject:
   m_ObjectHideFlags: 0
@@ -34188,6 +34503,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5505365798061291565
 GameObject:
   m_ObjectHideFlags: 0
@@ -34347,6 +34664,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5516619208452312877
 GameObject:
   m_ObjectHideFlags: 0
@@ -34775,6 +35094,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5630411813227055481
 GameObject:
   m_ObjectHideFlags: 0
@@ -35087,6 +35408,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5661208240906359005
 GameObject:
   m_ObjectHideFlags: 0
@@ -35216,6 +35539,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5682529754804290462
 GameObject:
   m_ObjectHideFlags: 0
@@ -35345,6 +35670,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5686713885048518907
 GameObject:
   m_ObjectHideFlags: 0
@@ -35594,6 +35921,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5722569377363740044
 GameObject:
   m_ObjectHideFlags: 0
@@ -35813,6 +36142,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5766811590686512285
 GameObject:
   m_ObjectHideFlags: 0
@@ -36380,6 +36711,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5917318466163922435
 GameObject:
   m_ObjectHideFlags: 0
@@ -36710,6 +37043,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5969156230883723213
 GameObject:
   m_ObjectHideFlags: 0
@@ -36932,6 +37267,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &5997675834765096218
 GameObject:
   m_ObjectHideFlags: 0
@@ -37184,6 +37521,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6060905748710376604
 GameObject:
   m_ObjectHideFlags: 0
@@ -37592,6 +37931,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6141430665915393789
 GameObject:
   m_ObjectHideFlags: 0
@@ -38003,6 +38344,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6201375230945948785
 GameObject:
   m_ObjectHideFlags: 0
@@ -38370,7 +38713,7 @@ Transform:
   m_GameObject: {fileID: 6326833097805148549}
   m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
   m_LocalPosition: {x: 28.3898, y: 0.1496893, z: 11.497787}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 200}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 30
@@ -38567,6 +38910,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6334867529657172476
 GameObject:
   m_ObjectHideFlags: 0
@@ -38696,6 +39041,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6343191521678884491
 GameObject:
   m_ObjectHideFlags: 0
@@ -38888,6 +39235,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6383420905714090331
 GameObject:
   m_ObjectHideFlags: 0
@@ -39387,6 +39736,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6500820359637601597
 GameObject:
   m_ObjectHideFlags: 0
@@ -39668,6 +40019,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6589737705605427654
 GameObject:
   m_ObjectHideFlags: 0
@@ -39887,6 +40240,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6634165156670859117
 GameObject:
   m_ObjectHideFlags: 0
@@ -40046,6 +40401,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6653140757902301115
 GameObject:
   m_ObjectHideFlags: 0
@@ -40230,7 +40587,7 @@ Transform:
   m_GameObject: {fileID: 6737975479107520477}
   m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
   m_LocalPosition: {x: 28.389797, y: 0.1496893, z: 48.013348}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 27
@@ -40457,6 +40814,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6744286540981804563
 GameObject:
   m_ObjectHideFlags: 0
@@ -40741,6 +41100,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6780196627552458807
 GameObject:
   m_ObjectHideFlags: 0
@@ -40900,6 +41261,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6798611266089643544
 GameObject:
   m_ObjectHideFlags: 0
@@ -40928,7 +41291,7 @@ Transform:
   m_GameObject: {fileID: 6798611266089643544}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: 31.674162}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 25
@@ -41374,6 +41737,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6883782032063719604
 GameObject:
   m_ObjectHideFlags: 0
@@ -41623,6 +41988,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &6913250445834154305
 GameObject:
   m_ObjectHideFlags: 0
@@ -41812,6 +42179,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7002530856267422940
 GameObject:
   m_ObjectHideFlags: 0
@@ -42061,6 +42430,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7110106221328002482
 GameObject:
   m_ObjectHideFlags: 0
@@ -42250,6 +42621,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7117997463629128250
 GameObject:
   m_ObjectHideFlags: 0
@@ -42622,6 +42995,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7187612199203924255
 GameObject:
   m_ObjectHideFlags: 0
@@ -42762,7 +43137,7 @@ Transform:
   m_GameObject: {fileID: 7218312205869561814}
   m_LocalRotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 23.961412, y: 0.14968944, z: 42.341656}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 36
@@ -43019,6 +43394,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7253829123305997373
 GameObject:
   m_ObjectHideFlags: 0
@@ -43670,6 +44047,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7390017834692029437
 GameObject:
   m_ObjectHideFlags: 0
@@ -43799,6 +44178,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7407222156733305830
 GameObject:
   m_ObjectHideFlags: 0
@@ -43928,6 +44309,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7407772508272233233
 GameObject:
   m_ObjectHideFlags: 0
@@ -44570,6 +44953,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7550944612131318324
 GameObject:
   m_ObjectHideFlags: 0
@@ -44789,6 +45174,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7587599592674720493
 GameObject:
   m_ObjectHideFlags: 0
@@ -44981,6 +45368,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7613481647344127326
 GameObject:
   m_ObjectHideFlags: 0
@@ -45449,6 +45838,9 @@ Transform:
   - {fileID: 2608549700563811230}
   - {fileID: 8212275743172880499}
   - {fileID: 5074596446817750713}
+  - {fileID: 4784266173871471459}
+  - {fileID: 3064814515164578252}
+  - {fileID: 6566431798297209797}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45624,6 +46016,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7683650844168056435
 GameObject:
   m_ObjectHideFlags: 0
@@ -46087,6 +46481,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7785977986038978480
 GameObject:
   m_ObjectHideFlags: 0
@@ -46423,6 +46819,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7854357998813864523
 GameObject:
   m_ObjectHideFlags: 0
@@ -46552,6 +46950,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7855402574254440146
 GameObject:
   m_ObjectHideFlags: 0
@@ -46711,6 +47111,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7887238301180544883
 GameObject:
   m_ObjectHideFlags: 0
@@ -47023,6 +47425,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7977406949467633693
 GameObject:
   m_ObjectHideFlags: 0
@@ -47051,7 +47455,7 @@ Transform:
   m_GameObject: {fileID: 7977406949467633693}
   m_LocalRotation: {x: 0.5, y: 0.49999997, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 10.311155, y: 0.14968944, z: 42.341656}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 35
@@ -47311,6 +47715,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &7999757594859727799
 GameObject:
   m_ObjectHideFlags: 0
@@ -47593,6 +47999,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8047750710226289295
 GameObject:
   m_ObjectHideFlags: 0
@@ -47752,6 +48160,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8058072995377183721
 GameObject:
   m_ObjectHideFlags: 0
@@ -48082,6 +48492,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8109091462041614799
 GameObject:
   m_ObjectHideFlags: 0
@@ -48485,6 +48897,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8188351837675030101
 GameObject:
   m_ObjectHideFlags: 0
@@ -48644,6 +49058,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8199897942761548449
 GameObject:
   m_ObjectHideFlags: 0
@@ -48866,6 +49282,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8288042822737128257
 GameObject:
   m_ObjectHideFlags: 0
@@ -49328,6 +49746,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8424670348766627829
 GameObject:
   m_ObjectHideFlags: 0
@@ -49547,6 +49967,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8457222883675121594
 GameObject:
   m_ObjectHideFlags: 0
@@ -49981,6 +50403,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8564225820852238104
 GameObject:
   m_ObjectHideFlags: 0
@@ -50110,6 +50534,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8581038516878664052
 GameObject:
   m_ObjectHideFlags: 0
@@ -50334,6 +50760,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8609346420432835185
 GameObject:
   m_ObjectHideFlags: 0
@@ -50616,6 +51044,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8667168092437118139
 GameObject:
   m_ObjectHideFlags: 0
@@ -50930,6 +51360,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8712586878158238548
 GameObject:
   m_ObjectHideFlags: 0
@@ -51089,6 +51521,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8725426066947556587
 GameObject:
   m_ObjectHideFlags: 0
@@ -51373,6 +51807,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8789450999908342026
 GameObject:
   m_ObjectHideFlags: 0
@@ -51741,6 +52177,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &8856066720754907491
 GameObject:
   m_ObjectHideFlags: 0
@@ -52438,6 +52876,8 @@ MonoBehaviour:
   isTable: 0
   glassTable: 0
   tableBreak: {fileID: 0}
+  isWooden: 1
+  woodSound: {fileID: 8300000, guid: 2a959fd5497d79e4c8e12072cbd29723, type: 3}
 --- !u!1 &9024976342838533279
 GameObject:
   m_ObjectHideFlags: 0
@@ -53066,7 +53506,7 @@ Transform:
   m_GameObject: {fileID: 9220909450512649210}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0.1496893, z: 17.870493}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 400}
   m_Children: []
   m_Father: {fileID: 6998830393459239259}
   m_RootOrder: 24
@@ -53164,6 +53604,166 @@ Transform:
   m_Father: {fileID: 2570731973134014114}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5332727314452249165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6998830393459239259}
+    m_Modifications:
+    - target: {fileID: 604757240803770669, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Name
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_RootOrder
+      value: 198
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0028473139
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 45.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770671, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2668953
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770671, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Size.z
+      value: 1.2511749
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770671, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Center.x
+      value: -0.2232151
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770671, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Center.y
+      value: 3.763957
+      objectReference: {fileID: 0}
+    - target: {fileID: 604757240803770671, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.12558746
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+--- !u!4 &4784266173871471459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 604757240803770670, guid: 99dee1f7037158f4fad19e3eb64c265a, type: 3}
+  m_PrefabInstance: {fileID: 5332727314452249165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5692984056618079100
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6566431798297209797}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0027
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0901
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66ddf9f698dda0c4188ce92a3f464c51, type: 2}
+    - target: {fileID: 919132149155446097, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+      propertyPath: m_Name
+      value: wall fix
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+--- !u!4 &5227328603235267735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+  m_PrefabInstance: {fileID: 5692984056618079100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7397846645320210640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53225,13 +53825,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
---- !u!1 &7668231062386730369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
-  m_PrefabInstance: {fileID: 7397846645320210640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6998830393832849211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
+  m_PrefabInstance: {fileID: 7397846645320210640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7668231062386730369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a7f50641577c6a42935d6714718a4a8, type: 3}
   m_PrefabInstance: {fileID: 7397846645320210640}
   m_PrefabAsset: {fileID: 0}

@@ -2,11 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour
 {
     public Timer timer;
     private SmashCounter smashCounter;
+    private Scene activeScene;
+
+    [System.NonSerialized]
+    public string activeSceneName;
 
     public int timeThresholdOne;
     public int timeThresholdTwo;
@@ -14,7 +19,20 @@ public class ScoreController : MonoBehaviour
     public int timeThresholdFour;
     public int timeThresholdFive;
 
+    [System.NonSerialized]
+    public int timerSeconds;
+
+    [NonSerialized]
+    public int timerMinutes = 0;
+
     public int maxScore;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        activeScene = SceneManager.GetActiveScene();
+        activeSceneName = activeScene.name;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +46,16 @@ public class ScoreController : MonoBehaviour
         
     }
 
-    public int GetScore()
+    public void GetScore()
     {
+        
+        timerMinutes = timer.timerMinutes;
+        timerSeconds = Convert.ToInt32(timer.timerSeconds);
+        /*
         int theScore;
-
         int timeScore = Convert.ToInt32((timer.timerMinutes * 60) + timer.timerSeconds);
         int timeModifier;
-
+        
         if (timeScore < timeThresholdOne)
         {
             timeModifier = 500;
@@ -60,10 +81,9 @@ public class ScoreController : MonoBehaviour
             timeModifier = 0;
         }
 
-        int smashConsequence = (smashCounter.smashedObjects * 10);
 
-        theScore = maxScore - smashConsequence + timeModifier;
+        theScore = maxScore + timeModifier;
 
-        return theScore;
+        return theScore;*/
     }
 }
