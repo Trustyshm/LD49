@@ -38,7 +38,8 @@ public class SpawnerController : MonoBehaviour
 
     public void PickLevel()
     {
-        int levelIndex = Random.Range(-1, levels.Length);
+        int levelIndex = Random.Range(0, levels.Length);
+        
         Instantiate(levels[levelIndex], levelSpawnSpot);
         
         SpawnPlayer();
